@@ -76,6 +76,8 @@ alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file
 alias kdiff3='/Users/Hossein/bin/kdiff3'    # Link to kdiff3
 alias gtkwave='/Users/Hossein/bin/gtkwave'  # Link to gtkwave
 alias grep='grep --color=always'            # Use some color for god sake!
+alias kdiff3='/Applications/kdiff3.app/Contents/MacOS/kdiff3' # alias to kdiff3 binary 
+
 #   lr:  Full Recursive Directory Listing
 #   ------------------------------------------
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
