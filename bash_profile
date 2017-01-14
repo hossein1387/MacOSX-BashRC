@@ -7,11 +7,6 @@
 #  2.   Make Terminal Better (remapping defaults and adding functionality)
 #  3.   File and Folder Management
 #  4.   Searching
-#  5.   Process Management
-#  6.   Networking
-#  7.   System Operations & Information
-#  8.   Web Development
-#  9.   Reminders & Notes
 #
 #  ---------------------------------------------------------------------------
 
@@ -51,8 +46,7 @@
 #   -----------------------------
 #   2.  MAKE TERMINAL BETTER
 #   -----------------------------
-
-#alias cp='cp -iv'                           # Preferred 'cp' implementation
+alias dirsz='du -d 1 -h'                    # Get size of a directory and it's sub's of depth 1
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
@@ -147,8 +141,3 @@ ffe () { /usr/bin/find . -name '*'"$@" ; }  # ffe:      Find file whose name end
 #   my_ps: List processes owned by my user:
 #   ------------------------------------------------------------
     my_ps() { ps $@ -u $USER -o pid,%cpu,%mem,start,time,bsdtime,command ; }
-
-#  list directory size 
-#   ------------------------------------------------------------
-   alias dirsz='du -d 1 -h'
-
