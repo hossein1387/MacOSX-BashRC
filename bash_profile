@@ -3,22 +3,50 @@
 #  Description:  This file holds all my BASH configurations and aliases
 #
 #  Sections:
-#  1.   Environment Configuration
-#  2.   Make Terminal Better (remapping defaults and adding functionality)
-#  3.   File and Folder Management
-#  4.   Searching
+#  1.   Defining colors
+#  2.   Environment Configuration
+#  3.   Make Terminal Better (remapping defaults and adding functionality)
+#  4.   File and Folder Management
+#  5.   Searching
 #
-#  ---------------------------------------------------------------------------
-
+#   ---------------------------------------------------------------------------
+#
 #   -------------------------------
-#   1.  ENVIRONMENT CONFIGURATION
+#   1. DEFINING COLORS
+#   -------------------------------
+C_DEFAULT="\[\033[m\]"
+C_WHITE="\[\033[1m\]"
+C_BLACK="\[\033[30m\]"
+C_RED="\[\033[31m\]"
+C_GREEN="\[\033[32m\]"
+C_YELLOW="\[\033[33m\]"
+C_BLUE="\[\033[34m\]"
+C_PURPLE="\[\033[35m\]"
+C_CYAN="\[\033[36m\]"
+C_LIGHTGRAY="\[\033[37m\]"
+C_DARKGRAY="\[\033[1;30m\]"
+C_LIGHTRED="\[\033[1;31m\]"
+C_LIGHTGREEN="\[\033[1;32m\]"
+C_LIGHTYELLOW="\[\033[1;33m\]"
+C_LIGHTBLUE="\[\033[1;34m\]"
+C_LIGHTPURPLE="\[\033[1;35m\]"
+C_LIGHTCYAN="\[\033[1;36m\]"
+C_BG_BLACK="\[\033[40m\]"
+C_BG_RED="\[\033[41m\]"
+C_BG_GREEN="\[\033[42m\]"
+C_BG_YELLOW="\[\033[43m\]"
+C_BG_BLUE="\[\033[44m\]"
+C_BG_PURPLE="\[\033[45m\]"
+C_BG_CYAN="\[\033[46m\]"
+C_BG_LIGHTGRAY="\[\033[47m\]"
+#   -------------------------------
+#   2.  ENVIRONMENT CONFIGURATION
 #   -------------------------------
 
 #   Change Prompt
 #   ------------------------------------------------------------
 #    export PS1="________________________________________________________________________________\w @ \h (\u)  -> ""
-#    export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
-    export PS1="\[\033[36m\]\u@\[\033[33;1m\]\w \[\033[91;1m\]-> \[\033[m\]"
+    export PS1="$C_GREEN\u$C_RED@$C_BLUE\h$C_DEFAULT->"
 
 #    export PS2="| => "
 
@@ -44,7 +72,7 @@
 
 
 #   -----------------------------
-#   2.  MAKE TERMINAL BETTER
+#   3.  MAKE TERMINAL BETTER
 #   -----------------------------
 alias dirsz='du -d 1 -h'                    # Get size of a directory and it's sub's of depth 1
 alias mv='mv -iv'                           # Preferred 'mv' implementation
@@ -95,7 +123,7 @@ alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\
 
 
 #   ---------------------------
-#   4.  SEARCHING
+#   5.  SEARCHING
 #   ---------------------------
 
 alias qfind="find . -name "                 # qfind:    Quickly search for file
