@@ -14,6 +14,7 @@
 #   -------------------------------
 #   1. DEFINING COLORS
 #   -------------------------------
+
 C_DEFAULT="\[\033[m\]"
 C_WHITE="\[\033[1m\]"
 C_BLACK="\[\033[30m\]"
@@ -46,7 +47,7 @@ C_BG_LIGHTGRAY="\[\033[47m\]"
 #   Change Prompt
 #   ------------------------------------------------------------
 #    export PS1="________________________________________________________________________________\w @ \h (\u)  -> ""
-    export PS1="$C_GREEN\u$C_RED@$C_BLUE\h$C_DEFAULT->"
+    export PS1="$C_GREEN\u$C_RED@$C_BLUE\w $C_DEFAULT->"
 
 #    export PS2="| => "
 
@@ -83,10 +84,10 @@ cd() { builtin cd "$@"; ll; }               # Always list directory contents upo
 alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
 alias ..='cd ../'                           # Go back 1 directory level
 alias ...='cd ../../'                       # Go back 2 directory levels
-alias .3='cd ../../../'                     # Go back 3 directory levels
-alias .4='cd ../../../../'                  # Go back 4 directory levels
-alias .5='cd ../../../../../'               # Go back 5 directory levels
-alias .6='cd ../../../../../../'            # Go back 6 directory levels
+alias cd3='cd ../../../'                     # Go back 3 directory levels
+alias cd4='cd ../../../../'                  # Go back 4 directory levels
+alias cd5='cd ../../../../../'               # Go back 5 directory levels
+alias cd6='cd ../../../../../../'            # Go back 6 directory levels
 alias subl='/usr/local/bin/sublime'         # path to sublime
 alias edit='subl'                           # edit:         Opens any file in sublime editor
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
